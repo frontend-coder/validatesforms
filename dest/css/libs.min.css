@@ -921,7 +921,8 @@ body.hidden-scrolling{overflow-y:hidden}
 .header__top{padding:100px 0;font-size:30px;text-align:center;color:#fff}
 .block{padding:60px 0;background-color:#fff}
 .gray__sec{background-color:grey}
-.block h2{margin-bottom:30px;text-align:center;color:#fff}
+.block h2,.block h3{margin-bottom:20px;text-align:center;color:#fff}
+.block h3{margin-bottom:30px}
 .label_ferst{position:relative;display:block;margin-bottom:20px}
 .header__line{position:absolute;left:0;top:0;width:100%}
 .header__line h1{font-weight:800}
@@ -995,5 +996,6 @@ input.input_ferst[aria-invalid=false]{border:3px solid green}
 .fon__for__three{position:relative;padding:100px 0;background-position:center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;background-color:#fff}
 .fon__for__three::after{content:"";position:absolute;right:0;top:-192px;z-index:0;width:100%;height:273px;background-color:#fff;transform:skewY(4deg)}
 .block__z{position:relative;z-index:1;padding:60px 0 169px}
+.fon__for__crue::after{content:"";position:absolute;right:0;top:-57px;z-index:0;width:100%;height:179px;background-color:#fff;transform:skewY(4deg)}
 footer{min-height:500px;background-color:#000fff}
 /*# sourceMappingURL=libs.min.css.map */
