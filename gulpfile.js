@@ -72,7 +72,8 @@ function scripts() {
       'app/libs/plagins/page-scroll-to-id-master/js/minified/jquery.malihu.PageScroll2id.min.js',
       'app/libs/plagins/magnific-popup/jquery.magnific-popup.min.js',
       'app/libs/jquery.validate.min.js',
-      'app/libs/jquery.mask.min.js',
+     'app/libs/jquery.mask.min.js',
+  //   'app/libs/jquery.maskedinput.min.js',
       'app/libs/common.js',
     ])
       .pipe(strip())

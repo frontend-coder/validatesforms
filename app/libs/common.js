@@ -1,7 +1,15 @@
 // $(document).ready(function(){
-
 $(document).ready(() => {
-  $('.menu-item-has-children > a').append('<i class="plus"></i>');
+  $(".header__menu-btn").on("click", () => {
+    $(".header__menu > ul").toggleClass("active");
+    $('.hamburger').toggleClass('is-active');
+  });
+
+  $(".header__drop-down.drop-down a").on("click", () => {
+    $(".header__drop-down> a").toggleClass("arrows_top");
+    $(".drop-down__list").toggleClass("visible");
+  });
+  // is - active;
   $('#fist__three').mask('+7(000)000-00-00', {
     selectOnFocus: true,
     placeholder: '+7(___)___-__-__',
@@ -19,9 +27,13 @@ $(document).ready(() => {
     placeholder: '+7(___)___-__-__',
     clearIfNotMatch: !0,
   });
-});
 
-$(document).ready(() => {
+  $('#fist__two__st').mask('nickname@gmail.com', {
+    selectOnFocus: true,
+    placeholder: 'nickname@gmail.com',
+    clearIfNotMatch: !0,
+  });
+
   $('#form-one').validate({
     rules: {
       myname: {
@@ -76,6 +88,7 @@ $(document).ready(() => {
 
           setTimeout(() => {
             $('#form-one .message').html('');
+            $('input.input_ferst').css('border', '3px solid transparent');
           }, 2000);
         },
         error(error) {

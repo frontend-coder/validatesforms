@@ -32,7 +32,7 @@
 }
 
 .header__line {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -49,232 +49,10 @@
   background-color: #ffffff;
 }
 
-.logo {
+.header_logo {
   padding: 0 1rem 0 0.3rem;
-  color: #000000;
-}
-
-.nav-menu ul {
-  list-style: none;
-}
-
-.nav-menu >ul >li {
-  display: inline-block;
-}
-
-.nav-menu >ul >li >a {
-  display: block;
-  padding: 0.51rem 1.3rem;
   font-size: 1.3rem;
-}
-
-.nav-menu >ul >li a {
-  text-decoration: none;
-}
-
-.header-main .nav-menu ul li >ul li {
-  padding-left: 5px;
-  text-align: left;
-}
-
-.menu-item-has-children a .plus {
-  position: relative;
-  right: -5px;
-  top: -5px;
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  pointer-events: none;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 100%;
-    height: 2px;
-    background-color: #000000;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease;
-  }
-
-  &::after {
-    transform: translate(-50%, -50%) rotate(-90deg);
-  }
-}
-
-.menu-item-has-children.active >a .plus::after {
-  transform: translate(-50%, -50%) rotate(0deg);
-  transition: all 0.3s ease;
-}
-
-.menu-item-has-children >a .plus {
-  top: -1px;
-}
-
-.menu-item-has-children:hover >a .plus::before,
-.menu-item-has-children:hover >a .plus::after {
-  background-color: #e91e63;
-}
-
-.menu-item-has-children {
-  position: relative;
-}
-
-.nav-menu >ul >li >ul {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  border-top: 3px solid #e91e63;
-  border-radius: 5px;
-  padding: 10px 5px;
-  width: 220px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: transform 0.2s;
-}
-
-.open-nav-menu {
-  display: none;
-}
-
-@media only screen and (min-width: 992px) {
-  .nav-menu >ul >li:hover >ul {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  .menu-item-has-children:hover >a .plus::after {
-    transform: translate(-50%, -50%) rotate(0);
-  }
-}
-
-.close-nav-menu {
-  display: none;
-}
-
-@media only screen and (max-width: 992px) {
-  .close-nav-menu {
-    display: block;
-    margin: 0 0 15px 15px;
-    width: 40px;
-    height: 40px;
-    background-color: #ffffff;
-    cursor: pointer;
-  }
-
-  .open-nav-menu {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 34px;
-    cursor: pointer;
-
-    & span {
-      position: relative;
-      display: block;
-      width: 24px;
-      height: 3px;
-      background-color: #000000;
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        display: block;
-        width: 24px;
-        height: 3px;
-        background-color: #000000;
-      }
-
-      &::before {
-        top: 7px;
-      }
-
-      &::after {
-        top: -7px;
-      }
-    }
-  }
-
-  .nav-menu {
-    position: fixed;
-    right: -280px;
-    top: 0;
-    z-index: 1000;
-    overflow-y: auto;
-    padding: 15px 0;
-    width: 280px;
-    height: 100%;
-    background-color: #222222;
-    visibility: hidden;
-    transition: all 0.5s ease;
-  }
-
-  .nav-menu.open {
-    right: 0;
-    visibility: visible;
-  }
-
-  .nav-menu >ul >li {
-    display: block;
-    margin: 0;
-  }
-
-  .nav-menu >ul >li >a {
-    border-bottom: 1px solid #333333;
-    padding: 12px 15px;
-    text-align: left;
-    color: #ffffff;
-  }
-
-  .nav-menu >ul >li:first-child >a {
-    border-top: 1px solid #333333;
-  }
-
-  .menu-item-has-children a .plus::after,
-  .menu-item-has-children a .plus::before {
-    background-color: #ffffff;
-  }
-
-  .nav-menu >li >ul {
-    width: 100%;
-  }
-
-  .nav-menu ul >.menu-item-has-children >a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav-menu >ul >li >ul {
-    position: relative;
-    left: auto;
-    top: auto;
-    overflow: hidden;
-    padding: 0;
-    width: 100%;
-    max-height: 0;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  .nav-menu >ul >li >ul >li >a {
-    display: block;
-    border-bottom: 1px solid #333333;
-    padding: 12px 45px;
-    font-size: 16px;
-    color: #000000;
-  }
+  color: #000000;
 }
 
 .form__basic .label_ferst span {
@@ -317,6 +95,7 @@
   border: 3px solid transparent;
   width: 300px;
   min-height: 30px;
+  line-height: 1.3;
   text-indent: 15px;
 }
 
