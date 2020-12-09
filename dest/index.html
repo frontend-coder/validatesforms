@@ -40,63 +40,55 @@
 
   <!-- Custom HTML -->
   <header class="header__top">
-
-    <div class="header__line">
+    <div class="header__wrapper">
       <div class="container">
-        <div class="header-main">
-          <div class="logo">Logo</div>
-
-          <!-- start navigation menu start -->
-
-          <div class="open-nav-menu">
-            <span></span>
+        <div class="header__inner">
+          <div class="header_logo">
+            <h2>Логотип</h2>
           </div>
-          <div class="menu-overlay"></div>
 
-          <nav class="nav-menu">
-            <div class="close-nav-menu">
-              <span></span>
-            </div>
-
+          <nav class="header__menu">
             <ul>
-              <li><a href="#">link 1</a></li>
-              <li class="menu-item-has-children">
-                <a data-toggle="sub-menu" href="#">link 2 </a>
-                <ul>
-                  <li><a href="#">link 1</a></li>
-                  <li><a href="#">link 2</a></li>
-                  <li><a href="#">link 3</a></li>
-                  <li><a href="#">link 4</a></li>
-                  <li><a href="#">link 5</a></li>
+              <li><a href="#">Главная</a></li>
+              <li class="header__drop-down drop-down">
+                <a href="#">каталог продукции</a>
+                <ul class="drop-down__list">
+                  <li> <a href="#">септики</a></li>
+                  <li> <a href="#">емкости для воды</a></li>
+                  <li> <a href="#">жироуловители</a></li>
+                  <li> <a href="#">пескоуловители</a></li>
+                  <li> <a href="#">кессоны и колодцы</a></li>
+                  <li> <a href="#">доп.оборудование</a></li>
                 </ul>
               </li>
-              <li><a href="#">link 3</a></li>
-              <li><a href="#">link 4</a></li>
-              <li><a href="#">link 5</a></li>
+              <li><a href="#">о заводе</a></li>
+              <li><a href="#">доставка и оплата</a></li>
+              <li><a href="#">инфо</a></li>
+              <li><a href="#">дилерам</a></li>
+              <li><a href="#">контакты</a></li>
             </ul>
           </nav>
 
-          <!-- end  navigation menu start -->
-
-
-
+          <div class="header__menu-btn">
+            <div class="hamburger hamburger--3dx">
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
     </div>
 
-
-
-
-    <h1>Валидация форм обратной связи уже сейчас</h1>
   </header>
 
   <main>
     <section class="block gray__sec">
       <div class="container">
         <h2>Валидация с помощью плагина jQuery Validate</h2>
-             <h3>Первая форма на этой странице</h3>
-        <form id="form-one" class="form__basic form-callback forms-calldecor">
+        <h3>Первая форма на этой странице</h3>
+        <form id="goToNewPage" class="form__basic form-callback forms-calldecor">
           <div class="success">
             успех
           </div>
@@ -119,8 +111,9 @@
             <input id="fist__foure" name="mytheme" class="input_ferst" type="text" placeholder="введите данные">
           </label>
           <button class="send__massage" type="submit">послать сообщение</button>
-          <div class="message"></div>
+          <div id="formPreview"></div>
         </form>
+
 
       </div>
 
@@ -215,11 +208,11 @@
       </div>
     </section>
 
-   <section class="block gray__sec">
+    <section class="block gray__sec">
       <div class="container">
         <h2>Валидация с помощью плагина jQuery Validate</h2>
         <h3>Вторая форма на этой странице</h3>
-        <form id="forming__two" class="form__basic form-callback forms-calldecor">
+        <form id="popupResult" class="form__basic form-callback forms-calldecor">
           <div class="success">
             успех
           </div>
@@ -242,7 +235,7 @@
             <input id="fist__foure__s" name="mytheme" class="input_ferst" type="text" placeholder="введите данные">
           </label>
           <button class="send__massage" type="submit">послать сообщение</button>
-          <div class="message"></div>
+          <div id="formPreview1"></div>
         </form>
 
       </div>
@@ -290,7 +283,7 @@
 
 
 
-   <section class="block gray__sec">
+    <section class="block gray__sec">
       <div class="container">
         <h2>Валидация с помощью плагина jQuery Validate</h2>
         <h3>Отправка сообщения на телеграмм</h3>
@@ -307,7 +300,8 @@
             <input id="fist_st" name="myname" class="input_ferst" type="text" placeholder="введите данные">
           </label>
           <label class="label_ferst" for="fist__two__st"><span>Введите ваш E-mail</span>
-            <input id="fist__two__st" name="myemail" class="input_ferst" type="email" placeholder="введите данные">
+            <input id="fist__two__st" name="myemail" class="input_ferst" type="email" data-mask="nickname@gmail.com"
+              placeholder="nickname@gmail.com">
           </label>
           <label class="label_ferst" for="fist__three__st"><span>Введите ваш телефон</span>
             <input id="fist__three__st" name="myphone" class="input_ferst" type="tel" placeholder="введите данные">
@@ -316,11 +310,11 @@
             <input id="fist__foure__st" name="mytheme" class="input_ferst" type="text" placeholder="введите данные">
           </label>
           <button class="send__massage" type="submit">послать сообщение</button>
-          <div class="message"></div>
+          <div id="formPreview2"></div>
         </form>
 
       </div>
-
+      <!-- https://github.com/RobinHerbots/Inputmask/issues/42 -->
     </section>
 
 
